@@ -2,26 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer components {
+  .sidebar-icon{
+    @apply relative flex rounded-3xl items-center p-4 justify-center h-16 w-16 mt-2 mb-2 mx-auto text-indigo-600 drop-shadow-lg bg-gray-50 hover:bg-indigo-600 hover:text-white hover:rounded-xl transition-all duration-300 cursor-pointer ease-linear;
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+  .sidebar-tooltip{
+      @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md shadow-md scale-0 text-white bg-gray-900 text-base font-bold transition-all duration-100 origin-left ml-8;
+  }
+
+} 

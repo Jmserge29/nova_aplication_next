@@ -1,0 +1,16 @@
+- /
+  - /home
+  - /about
+  - /contact
+  - /signup
+  - /signin
+  - /dashboard
+    - /profile
+    - /messages
+    - /settings
+    - /logout
+  - /admin
+    - /users
+    - /posts
+    - /analytics
+    - /settings
