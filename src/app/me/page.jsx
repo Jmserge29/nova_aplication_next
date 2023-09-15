@@ -8,9 +8,6 @@ import { useSession } from "next-auth/react";
 import ProfileSection from "@/components/Profile/ProfileSection";
 import SkeletonPublications from "@/components/Skeleton/SkeletonPublications";
 import Publications from "@/components/Profile/Publications";
-export const metadata = {
-  title: "Nova-App",
-};
 
 
 export default function Page() {

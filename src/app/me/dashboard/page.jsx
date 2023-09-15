@@ -3,19 +3,11 @@ import { useSession, signOut } from "next-auth/react";
 import Loader from "@/components/Loaders/loader";
 import { useState } from "react";
 import MinidenticonImg from '../../../components/Minidenticons/MinidenticonImg'
-import axios from "axios";
-
-export const metadata = {
-  title: "Dashboard",
-};
-
 
 function page() {
   const [username, setUsername ]= useState("")
   const { data: session, status } = useSession();
   console.log(session);
-  // const [dtU, setDtu] = useState()
-  // setDtu(session)
   return (
     <>
     <div className="flex mx-5 py-2 justify-end">

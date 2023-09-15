@@ -60,9 +60,6 @@ const posts = [
   // More posts...
 ];
 
-export const metadata = {
-  title: "Me",
-};
 useEffect(() => {
   Aos.init();
 }, []);

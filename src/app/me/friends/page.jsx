@@ -8,10 +8,6 @@ import CardSolicitudeSender from "@/components/Friends/CardSolicitudeSender";
 import CardFriends from "@/components/Friends/CardFriends";
 import { EllipsisVerticalIcon} from "@heroicons/react/20/solid";
 
-export const metadata = {
-    title: "Friends",
-};
-
 
 function page() {
   const [isotope, setIsotope] = useState(null);
