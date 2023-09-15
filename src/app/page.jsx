@@ -2,6 +2,9 @@
 import { useSession } from "next-auth/react";
 import NavBar from "../components/NavBar/NavBar";
 import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 const posts = [
   {
     id: 1,
@@ -60,6 +63,9 @@ const posts = [
 export const metadata = {
   title: "Me",
 };
+useEffect(() => {
+  Aos.init();
+}, []);
 
 
 export default function Home() {
