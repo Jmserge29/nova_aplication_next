@@ -1,9 +1,6 @@
 "use client";
 import SideBarTailwind from "@/components/Sidebar/SideBarTailwind";
 import { useSession } from "next-auth/react";
-export const metadata = {
-  title: "Nova-App",
-};
 
 
 export default function DashboardLayout({
