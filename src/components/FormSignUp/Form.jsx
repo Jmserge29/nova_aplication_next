@@ -2,6 +2,9 @@
 import { Switch } from "@headlessui/react";
 import axios, { AxiosError } from "axios";
 import { useState } from "react";
+import { minidenticon } from "minidenticons"
+import { useMemo } from 'react'
+import { Toaster, toast } from "react-hot-toast";
 
 function Form() {
   const [enabled, setEnabled] = useState(false);
@@ -10,11 +13,18 @@ function Form() {
   const [password, setPasword] = useState("");
   const [error, setError] = useState(null);
 
+  const svgURI = useMemo(
+    () => 'data:image/svg+xml;utf8,' + encodeURIComponent(minidenticon(username, 90, 50)),
+    [username, 90, 50]
+  )
+
+
   const handlerRegister = async (e) => {
     e.preventDefault();
     try {
       await axios
         .post(`https://server-nova.vercel.app/User/sign-up`, {
+          picture : svgURI,
           username,
           email,
           password,
@@ -22,6 +32,17 @@ function Form() {
         .then((data) => {
           // SESSION
           console.log(data);
+          toast.custom((t) => (
+            <div id="toast-success" className=" animate-bounce flex items-center w-full max-w-xs p-4 mb-4 border-green-400 border-1 text-gray-500 bg-white rounded-xl shadow " role="alert">
+              <div className="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg ">
+                  <svg className="w-8 h-8" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                  </svg>
+                  <span className="sr-only">Check icon</span>
+              </div>
+              <div className="ml-3 text-md font-normal">The user <span className=" font-medium">{username}</span> has been created successly!</div>
+          </div>
+          ))
           setError(null);
         })
         .catch((error) => {
@@ -38,6 +59,14 @@ function Form() {
 
   return (
     <>
+          <div>
+        <Toaster
+        position="bottom-right"
+        reverseOrder={false}
+      />
+
+      </div>
+
       <div className="isolate pt-48" key={121}>
         <div className="flex w-5/6 lg:flex-row shadow-lg rounded-lg mx-auto overflow-hidden">
           <div className="w-full flex items-center justify-center lg:w-1/2">

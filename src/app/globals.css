@@ -11,4 +11,19 @@
       @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md shadow-md scale-0 text-white bg-gray-900 text-base font-bold transition-all duration-100 origin-left ml-8;
   }
 
+  .sidemessage-tooltip{
+    @apply absolute w-auto p-2 m-2 min-w-max right-14 rounded-md shadow-md scale-0 text-white bg-gray-900 text-base font-bold transition-all duration-100 mr-12 mt-5;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color:rgb(231, 227, 227);
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #6366f1;
+    border-radius: 10px;
+  }
 } 

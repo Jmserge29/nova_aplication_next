@@ -1,7 +1,7 @@
-function DetailsUser() {
+function DetailsUser({session}) {
   return (
     <div className="">
-      <div className=" my-4 mx-2 py-3 shadow-sm rounded-md bg-gray-300 text-stone-950">
+      <div className=" my-4 mx-2 py-3 shadow-sm rounded-md bg-gray-100 text-stone-950">
         <h4 className=" ml-8 mt-2 mb-5 text-lg leading-3 font-semibold lg:text-xl">
           Detalles
         </h4>
@@ -11,7 +11,7 @@ function DetailsUser() {
         </p>
       </div>
       <div>
-        <div className="my-4 mx-2 py-6 shadow-sm rounded-md bg-gray-300 text-stone-950">
+        <div className="my-4 mx-2 py-6 shadow-sm rounded-md bg-gray-100 text-stone-950">
           <div className="grid xl:grid-cols-3 grid-cols-1">
             <div>
               <h4
@@ -65,7 +65,9 @@ function DetailsUser() {
         </div>
         <div></div>
       </div>
-    </div>
+      
+      
+      </div>
   );
 }
 

@@ -11,6 +11,8 @@ import {
   HomeIcon,
   FolderOpenIcon,
   ArrowRightOnRectangleIcon,
+  UserGroupIcon,
+  WrenchScrewdriverIcon
 } from "@heroicons/react/20/solid";
 import MovilSideBar from "./MovilSideBar";
 import Link from "next/link";
@@ -23,10 +25,22 @@ const navegation = [
     icon: <UserCircleIcon />,
   },
   {
+    id: "1234197",
+    name: "Dashboard 👨‍💻",
+    url: "/me/dashboard",
+    icon: <WrenchScrewdriverIcon />,
+  },
+  {
     id: "123421",
     name: "Analytics 👨‍💻",
     url: "/me/analytics",
     icon: <ChartPieIcon />,
+  },
+  {
+    id: "1234197",
+    name: "Friends 🎇",
+    url: "/me/friends",
+    icon: <UserGroupIcon />,
   },
   {
     id: "123430",

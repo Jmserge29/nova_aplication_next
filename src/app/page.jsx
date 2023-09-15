@@ -1,6 +1,7 @@
 "use client";
 import { useSession } from "next-auth/react";
 import NavBar from "../components/NavBar/NavBar";
+import { useEffect } from "react";
 const posts = [
   {
     id: 1,
@@ -56,7 +57,15 @@ const posts = [
   // More posts...
 ];
 
+export const metadata = {
+  title: "Me",
+};
+
+
 export default function Home() {
+  useEffect(() => {
+
+  }, [])
   const session = useSession()
   console.log({session})
 

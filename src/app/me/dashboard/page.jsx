@@ -2,50 +2,16 @@
 import { useSession, signOut } from "next-auth/react";
 import Loader from "@/components/Loaders/loader";
 import { useState } from "react";
-const user = {
-    "squadName": "Super hero squad",
-    "homeTown": "Metro City",
-    "formed": 2016,
-    "secretBase": "Super tower",
-    "active": true,
-    "members": [
-      {
-        "name": "Molecule Man",
-        "age": 29,
-        "secretIdentity": "Dan Jukes",
-        "powers": [
-          "Radiation resistance",
-          "Turning tiny",
-          "Radiation blast"
-        ]
-      },
-      {
-        "name": "Madame Uppercut",
-        "age": 39,
-        "secretIdentity": "Jane Wilson",
-        "powers": [
-          "Million tonne punch",
-          "Damage resistance",
-          "Superhuman reflexes"
-        ]
-      },
-      {
-        "name": "Eternal Flame",
-        "age": 1000000,
-        "secretIdentity": "Unknown",
-        "powers": [
-          "Immortality",
-          "Heat Immunity",
-          "Inferno",
-          "Teleportation",
-          "Interdimensional travel"
-        ]
-      }
-    ]
-  }
+import MinidenticonImg from '../../../components/Minidenticons/MinidenticonImg'
+import axios from "axios";
+
+export const metadata = {
+  title: "Dashboard",
+};
 
 
 function page() {
+  const [username, setUsername ]= useState("")
   const { data: session, status } = useSession();
   console.log(session);
   // const [dtU, setDtu] = useState()
@@ -67,7 +33,25 @@ function page() {
             
             </pre>
           </div>
-            
+          </div>
+        </div>
+      </div>
+      <div className="p-4 m-2 lg:ml-64 lg:mr-64">
+        <div className="rounded-lg shadow-2xl bg-white relative">
+          <div className="text-center font-semibold text-lg sm:pt-4 pt-2 sm:pb-5 pb-3">
+            <h2 className="text-4xl font-bold leading-4 pt-12 text-blue-500 italic">(Username)</h2>
+          </div>
+          <div className="flex justify-center">
+          <MinidenticonImg
+            username={username}
+            saturation="90"
+            width="300"
+            height="300"
+          />
+
+          </div>
+          <div className="flex justify-center py-4 ">
+            <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Username" className=" italic font-bold text-center text-indigo-400 ring-1 ring-inset ring-gray-200 placeholder:text-blue-400 focus:ring-2 rounded-xl focus:ring-inset focus:ring-indigo-400 py-3 mx-3 px-5 content-center "/>
           </div>
         </div>
       </div>
