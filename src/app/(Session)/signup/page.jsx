@@ -7,7 +7,7 @@ export const metadata = {
 }
 
 
-function SignUp() {
+function Page() {
 
   return (
     <>
@@ -45,4 +45,4 @@ function SignUp() {
   );
 }
 
-export default SignUp;
+export default Page;

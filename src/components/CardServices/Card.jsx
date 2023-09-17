@@ -1,14 +1,15 @@
-
-
+import Image from 'next/image';
 
 function Card() {
   return (
     <div className=" transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 cursor-pointer !z-5 relative rounded-[20px] max-w-[300px] drop-shadow-xl bg-clip-border shadow-3xl shadow-shadow-500 flex flex-col w-full !p-4 3xl:p-![18px] bg-white undefined">
       <div className="h-full w-full">
         <div className="relative w-full">
-          <img
+          <Image
             src="https://horizon-tailwind-react-git-tailwind-components-horizon-ui.vercel.app/static/media/Nft3.3b3e6a4b3ada7618de6c.png"
             className="mb-3 h-full w-full rounded-xl 3xl:h-full 3xl:w-full"
+            width={500}
+            height={500}
             alt=""
           />
           <button className="absolute top-3 right-3 flex items-center justify-center rounded-full bg-white p-2 text-brand-500 hover:cursor-pointer">

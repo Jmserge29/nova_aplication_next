@@ -60,12 +60,14 @@ const posts = [
   // More posts...
 ];
 
-useEffect(() => {
-  Aos.init();
-}, []);
 
 
 export default function Home() {
+
+  useEffect(() => {
+    Aos.init();
+  }, []);
+  
   useEffect(() => {
 
   }, [])

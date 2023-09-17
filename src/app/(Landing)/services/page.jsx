@@ -5,7 +5,7 @@ export const metadata = {
   title: "Services",
 };
 
-function Services() {
+function Page() {
   return (
     <>
       <NavBar />
@@ -93,4 +93,4 @@ function Services() {
   );
 }
 
-export default Services;
+export default Page;

@@ -9,7 +9,7 @@ import CardFriends from "@/components/Friends/CardFriends";
 import { EllipsisVerticalIcon} from "@heroicons/react/20/solid";
 
 
-function page() {
+function Page() {
   const [isotope, setIsotope] = useState(null);
   const [filterKey, setFilterKey] = useState('.search-friend'); // Initial Filter
 
@@ -180,4 +180,4 @@ function page() {
       );
     }
 
-export default page
+export default Page

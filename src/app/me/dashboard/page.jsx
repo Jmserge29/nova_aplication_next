@@ -4,7 +4,7 @@ import Loader from "@/components/Loaders/loader";
 import { useState } from "react";
 import MinidenticonImg from '../../../components/Minidenticons/MinidenticonImg'
 
-function page() {
+function Page() {
   const [username, setUsername ]= useState("")
   const { data: session, status } = useSession();
   console.log(session);
@@ -51,4 +51,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

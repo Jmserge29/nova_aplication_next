@@ -5,7 +5,7 @@ export const metadata = {
   title: "Chats",
 };
 
-function ChatPage() {
+function Page() {
   return (
     <>
       
@@ -76,4 +76,4 @@ function ChatPage() {
   );
 }
 
-export default ChatPage;
+export default Page;
